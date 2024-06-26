@@ -1,0 +1,145 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - infor_city
+  - infor_start_date
+  - infor_end_date
+  - infor_adults
+  - infor_children
+  - infor_rooms
+  - oke
+  - confirm_infor
+  - ask_name
+
+entities:
+  - city
+  - start_date
+  - end_date
+  - adults
+  - children
+  - rooms
+  - username
+  - user_sex
+
+slots:
+  username:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: username
+  user_sex:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: user_sex
+  city:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: city
+  start_date:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: start_date
+  end_date:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: end_date
+  adults:
+    type: categorical
+    mappings: 
+    - type: from_entity
+      entity: adults
+  children:
+    type: categorical
+    mappings: 
+    - type: from_entity
+      entity: children
+  rooms:
+    type: categorical
+    mappings: 
+    - type: from_entity
+      entity: rooms
+
+actions: 
+  - action_search_hotel
+  
+responses:
+  utter_greet:
+  - text: "Vâng ạ, em chào quý khách ạ. Quý khách cho em xin tên để mình tiện xưng hô ạ."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+  - text: "Vâng. Em chào {user_sex} {username}. Em có thể giúp gì cho {user_sex} {username} ạ"
+  - text: "Vâng.{user_sex} {username} đúng không ạ. {user_sex} {username} muốn em giúp gì vậy ạ"
+  - text: "Vâng.{user_sex} {username} phải không ạ. {user_sex} {username} cần em tư vấn gì liên quan đến tìm khách sạn thì cứ nói thoải mái ạ"
+
+  utter_take_infor_city:
+  - text: "Vâng.{user_sex} {username} muốn đặt phòng ở {city} đúng không? {user_sex} {username} muốn nhận phòng vào ngày nào?"
+  - text: "Ở {city} nhỉ. Quý khách muốn nhận phòng ngày nào ạ?"
+
+  utter_take_infor_start_date:
+  - text: "{user_sex} {username} nhận phòng ngày {start_date} nhỉ. Vậy còn ngày trả phòng thì như nào ạ?"
+  - text: "Ngày nhận phòng là {start_date} rồi. Vậy ngày trả phòng là ngày nào?"
+
+  utter_take_infor_end_date:
+  - text: "{user_sex} {username} trả phòng ngày {end_date} nhỉ. {user_sex} {username} đặt phòng cho mấy người lớn ạ?"
+  - text: "Ngày trả phòng là {end_date}. {user_sex} {username} đặt phòng cho mấy người lớn ạ?"
+
+  utter_take_infor_adults:
+  - text: "{adults} người lớn. Vậy còn trẻ em thì mấy người ạ (trẻ em dưới 10 tuổi)?"
+  - text: "Có {adults} người lớn rồi này. {user_sex} {username} có dẫn theo trẻ em không ạ (trẻ em dưới 10 tuổi)?"
+
+  utter_take_infor_children:
+  - text: "{children} trẻ em. {user_sex} {username} muốn đặt mấy phòng ạ?"
+  - text: "Thêm {children} bạn nhỏ. {user_sex} {username} muốn đặt mấy phòng ạ?"
+  - text: "Thêm {children} bé. {user_sex} {username} muốn đặt mấy phòng ạ?"
+
+  utter_take_infor_rooms:
+  - text: "{rooms} phòng. Bây giờ em sẽ xác nhận lại thông tin ạ. {user_sex} {username} nhập 'Oke' em sẽ gửi lại thông tin mình vừa cung cấp ạ."
+  
+  utter_confirm_infor:
+  - text: "Nơi muốn đặt phòng {city}\n
+          Ngày nhận phòng {start_date}\n
+          Ngày trả phòng {end_date}\n
+          Số lượng người lớn {adults}\n
+          Số lượng trẻ em {children}\n
+          Số lượng phòng {rooms}\n
+          Trên đây là thông tin {user_sex} {username} vừa cung cấp. Nếu đúng {user_sex} {username} vui lòng nhập 'Đúng' để chúng tôi tiến hành tìm kiếm khách sạn phù hợp cho {user_sex} ạ."
+
+  
+  # utter_search_hotels:
+  # - text: "{message}"
+  # - text: "Dưới đây là danh sách các khách sạn mà chúng tôi đã tìm được ạ \n
+  #         - Khách sạn 1\n
+  #         - Khách sạn 2\n
+  #         - Khách sạn 3\n
+  #         - Khách sạn 4\n
+  #         Quý khách có thể click vào từng khách sạn đê xem chi tiết phòng ạ. Bot xin cảm ơn ạ."
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

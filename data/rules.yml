@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+
+- rule: take information city
+  steps:
+  - intent: infor_city
+  - action: action_search_hotel
+
+- rule : take number of adults
+  steps:
+  - intent: infor_adults
+  - action: utter_take_infor_adults
+
+- rule : take number of children
+  steps: 
+  - intent: infor_children
+  - action: utter_take_infor_children
+
+- rule : take number of rooms
+  steps:
+  - intent: infor_rooms
+  - action: utter_take_infor_rooms
+
+- rule : greetings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule : ask name
+  steps:
+  - intent: ask_name
+  - action: utter_ask_name
+
+- rule : take start date
+  steps:
+  - intent: infor_start_date
+  - action: utter_take_infor_start_date
+
+- rule : take end date
+  steps:
+  - intent: infor_end_date
+  - action: utter_take_infor_end_date
+
+- rule : oke confirm information
+  steps:
+  - intent: oke
+  - action: utter_confirm_infor
+
+- rule : confirm information
+  steps:
+  - intent: confirm_infor
+  - action: action_search_hotel
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
