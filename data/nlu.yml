@@ -5,172 +5,211 @@ version: "3.1"
 #     pattern: "\d{1,2}/\d{1,2}/\d{4}"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - chào bot
-    - xin chào
-    - chào bạn
-    - hello bot
-    - xin chào bot
-    - chào bạn bot
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - chào bot
+      - xin chào
+      - chào bạn
+      - hello bot
+      - xin chào bot
+      - chào bạn bot
 
-- intent: goodbye
-  examples: |
-    - bye
-    - goodbye
-    - bye bye
-    - Chào quý khách, chúc quý khách một ngày tốt lành
-    - Chào quý khách, chúc quý khách tìm được khách sạn ưng ý
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - bye bye
+      - Chào quý khách, chúc quý khách một ngày tốt lành
+      - Chào quý khách, chúc quý khách tìm được khách sạn ưng ý
 
-- intent: thank
-  examples: |
-    - thanks
-    - thx
-    - thank you
-    - cảm ơn bot
-    - cảm ơn bạn
-    - cảm ơn hệ thống nhé
-    - cảm ơn nhiều
-    - cam on
+  - intent: thank
+    examples: |
+      - thanks
+      - thx
+      - thank you
+      - cảm ơn bot
+      - cảm ơn bạn
+      - cảm ơn hệ thống nhé
+      - cảm ơn nhiều
+      - cam on
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- intent: ask_name
-  examples: |
-    - [Chị](user_sex) tên là [Hà](username)
-    - [Anh](user_sex) tên là [Đức](username)
-    - [Chị](user_sex) là [Tâm](username)
-    - [Anh](user_sex) là [Sơn](username)
-    - [Mình](user_sex) là [Duyên](username)
-    - [Mình](user_sex) tên [Lâm](username)
+  - intent: ask_name
+    examples: |
+      - [Chị](user_sex) tên là [Hà](username)
+      - [Anh](user_sex) tên là [Đức](username)
+      - [Chị](user_sex) là [Tâm](username)
+      - [Anh](user_sex) là [Sơn](username)
+      - [Mình](user_sex) là [Duyên](username)
+      - [Mình](user_sex) tên [Lâm](username)
+      - [Tôi](user_sex) tên là [Đức](username)
+      - [Tôi](user_sex) là [Sơn](username)
+      - [Tôi](user_sex) là [Duyên](username)
+      - [Tôi](user_sex) là [Lâm](username)
+      - [Tôi](user_sex) là [Hà](username)
+      - [Tớ](user_sex) là [Đức](username)
+      - [Tớ](user_sex) là [Sơn](username)
+      - [Tớ](user_sex) là [Duyên](username)
+      - [Tớ](user_sex) là [Lâm](username)
+      - [Tớ](user_sex) là [Hà](username)
+      - [Tao](user_sex) là [Đức](username)
+      - [Tao](user_sex) là [Sơn](username)
+      - [Tao](user_sex) là [Duyên](username)
+      - [Tao](user_sex) là [Lâm](username)
+      - [Tao](user_sex) là [Hà](username)
 
-- intent: infor_city
-  examples: |
-    - Tôi muốn tìm khách sạn ở [Hà Nội]{"entity": "city"}
-    - Cho tôi danh sách khách sạn ở [Đà Nẵng]{"entity": "city"}
-    - Tìm khách sạn ở [Hà Nội]{"entity": "city"}
-    - [Chị](user_sex) muốn tìm phòng ở [Hà Nội](city)
-    - Tôi muốn tìm khách sạn ở [Đà Nẵng]{"entity": "city"}
-    - Tôi muốn tìm khách sạn ở [Hải Phòng]{"entity": "city"}
-    - Tôi muốn tìm khách sạn ở [Đà Lạt]{"entity": "city"}
+  - intent: infor_city
+    examples: |
+      - Tôi muốn tìm khách sạn ở [Hà Nội]{"entity": "city"}
+      - Cho tôi danh sách khách sạn ở [Đà Nẵng]{"entity": "city"}
+      - Tìm khách sạn ở [Hà Nội]{"entity": "city"}
+      - [Chị](user_sex) muốn tìm phòng ở [Hà Nội](city)
+      - Tôi muốn tìm khách sạn ở [Đà Nẵng]{"entity": "city"}
+      - Tôi muốn tìm khách sạn ở [Hải Phòng]{"entity": "city"}
+      - Tôi muốn tìm khách sạn ở [Đà Lạt]{"entity": "city"}
 
-- intent: infor_start_date
-  examples: |
-    - Tôi muốn nhận phòng vào ngày [25/05/2024]{"entity": "start_date"}
-    - Tôi muốn nhận phòng ngày [24/05/2024]{"entity": "start_date"}
-    - Nhận phòng ngày [02/05/2024]{"entity": "start_date"}
-    - Nhận phòng [19/05/2024]{"entity": "start_date"}
-    - checkin ngày [15/09/2024]{"entity": "start_date"}
+  - intent: infor_start_date
+    examples: |
+      - Tôi muốn nhận phòng vào ngày [25/05/2024]{"entity": "start_date"}
+      - Tôi muốn nhận phòng ngày [24/05/2024]{"entity": "start_date"}
+      - Nhận phòng ngày [02/05/2024]{"entity": "start_date"}
+      - Nhận phòng [19/05/2024]{"entity": "start_date"}
+      - checkin ngày [15/09/2024]{"entity": "start_date"}
 
-- intent: infor_end_date
-  examples: |
-    - Tôi muốn trả phòng vào ngày [27/05/2024]{"entity": "end_date"}
-    - Tôi muốn trả phòng ngày [29/05/2024]{"entity": "end_date"}
-    - Trả phòng ngày [03/05/2024]{"entity": "end_date"}
-    - Trả phòng [06/05/2024]{"entity": "end_date"}
-    
-- intent: infor_adults
-  examples: |
-    - [2]{"entity": "adults"} người lớn
-    - Tôi muốn đặt phòng cho [3]{"entity": "adults"} người lớn
-    - [4]{"entity": "adults"} người
+  - intent: infor_end_date
+    examples: |
+      - Tôi muốn trả phòng vào ngày [27/05/2024]{"entity": "end_date"}
+      - Tôi muốn trả phòng ngày [29/05/2024]{"entity": "end_date"}
+      - Trả phòng ngày [03/05/2024]{"entity": "end_date"}
+      - Trả phòng [06/05/2024]{"entity": "end_date"}
 
-- intent: infor_children
-  examples: |
-    - [2]{"entity": "children"} trẻ em
-    - Tôi muốn đặt phòng cho [0]{"entity": "children"} trẻ em
-    - [0]{"entity": "children"} trẻ em
-    - [0]{"entity": "children"}
-    - [Không]{"entity": "children"} có
-    - [Chị](user_sex) dẫn theo [2](children) bạn nhỏ nhé
-    - [Anh](user_sex) dẫn theo [2](children) bạn nhỏ nhé
+  - intent: infor_adults
+    examples: |
+      - [2]{"entity": "adults"} người lớn
+      - Tôi muốn đặt phòng cho [3]{"entity": "adults"} người lớn
+      - [4]{"entity": "adults"} người
 
-- intent: infor_rooms
-  examples: |
-    - [2]{"entity": "rooms"} phòng
-    - Tôi muốn đặt [1]{"entity": "rooms"} phòng
-    - [3]{"entity": "rooms"} 
-    - [5]{"entity": "rooms"} 
+  - intent: infor_children
+    examples: |
+      - [2]{"entity": "children"} trẻ em
+      - Tôi muốn đặt phòng cho [0]{"entity": "children"} trẻ em
+      - [0]{"entity": "children"} trẻ em
+      - [0]{"entity": "children"}
+      - [Không]{"entity": "children"} có
+      - [Chị](user_sex) dẫn theo [2](children) bạn nhỏ nhé
+      - [Anh](user_sex) dẫn theo [2](children) bạn nhỏ nhé
 
-- intent: oke
-  examples: |
-    - Oke
-    - Tôi đồng ý
-    - Gửi đi em
-    - Gửi đi bot
+  - intent: infor_rooms
+    examples: |
+      - [2]{"entity": "rooms"} phòng
+      - Tôi muốn đặt [1]{"entity": "rooms"} phòng
+      - [3]{"entity": "rooms"} 
+      - [5]{"entity": "rooms"}
 
-- intent: confirm_infor
-  examples: |
-    - Đúng
-    - Chuẩn
+  - intent: oke
+    examples: |
+      - Oke
+      - Tôi đồng ý
+      - Gửi đi em
+      - Gửi đi bot
+
+  - intent: confirm_infor
+    examples: |
+      - Đúng
+      - Chuẩn
+
+  - intent: search_by_distance
+    examples: |
+      - Tôi muốn tìm khách sạn trong phạm vi [10](distance) km so với trung tâm
+      - Trong khoảng [5](distance) km so với trung tâm có khách sạn nào không?
+      - Trong khoảng [3](distance) km với trung tâm có khách sạn nào không?
+      - Tôi muốn tìm khách sạn trong phạm vi [3](distance) km so với trung tâm thành phố
+      - Khoảng [2](distance) km so với trung tâm có khách sạn nào không?
+      - Cách khoảng [1](distance) km so với trung tâm có khách sạn nào không?
+
+  - intent: search_by_date
+    examples: |
+      - Từ ngày [10/7/2024](start_date) đến ngày [12/7/2024](end_date) có khách sạn nào có phòng trống không?
+      - Từ ngày [11/7/2024](start_date) đến ngày [15/7/2024](end_date) có khách sạn nào có phòng trống không?
+      - Trong khoảng [11/7/2024](start_date) đến [15/7/2024](end_date) có tìm được phòng nào ở [Hà Nội](city) không?
+      - Trong khoảng [12/7/2024](start_date) đến [15/7/2024](end_date) có tìm được phòng nào ở [Hải Phòng](city) không?
+
+  - intent: search_by_peoplenum
+      - Có khách sạn nào có [1](rooms) phòng đủ cho [2](adults) người lớn, [1](children) trẻ em không?
+      - Có khách sạn nào có [2](rooms) phòng đủ cho [5](adults) người lớn, [0](children) trẻ em không?
+      
+  - intent: search_by_price
+      - Có khách sạn nào có phòng trong khoảng giá [200000](price1) đến [300000](price2) không?
+      - Trong khoảng giá [250000](price1) đến [400000](price2) có khách sạn nào không?

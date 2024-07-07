@@ -61,3 +61,27 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: thank
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- rule: search by distance
+  steps:
+  - intent: search_by_distance
+  - action: action_search_by_condition
+
+- rule: search by price
+  steps:
+  - intent: search_by_price
+  - action: action_search_by_condition
+
+- rule: search by peoplenum
+  steps:
+  - intent: search_by_peoplenum
+  - action: action_search_by_condition
+- rule: search by date
+  steps:
+  - intent: search_by_date
+  - action: action_search_by_condition

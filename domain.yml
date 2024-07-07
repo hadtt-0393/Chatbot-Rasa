@@ -17,6 +17,11 @@ intents:
   - oke
   - confirm_infor
   - ask_name
+  - thank
+  - search_by_distance
+  - search_by_date
+  - search_by_peoplenum
+  - search_by_price
 
 entities:
   - city
@@ -27,6 +32,9 @@ entities:
   - rooms
   - username
   - user_sex
+  - distance
+  - price1
+  - price2
 
 slots:
   username:
@@ -69,9 +77,15 @@ slots:
     mappings: 
     - type: from_entity
       entity: rooms
+  distance:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: distance
 
 actions: 
   - action_search_hotel
+  - action_search_by_condition
   
 responses:
   utter_greet:
@@ -131,7 +145,9 @@ responses:
           Số lượng phòng {rooms}\n
           Trên đây là thông tin {user_sex} {username} vừa cung cấp. Nếu đúng {user_sex} {username} vui lòng nhập 'Đúng' để chúng tôi tiến hành tìm kiếm khách sạn phù hợp cho {user_sex} ạ."
 
-  
+  utter_thank:
+  - text: "Cảm ơn {user_sex} {username} ạ."
+  - text: "Cảm ơn {user_sex} {username} đã sử dụng hệ thống ạ."
   # utter_search_hotels:
   # - text: "{message}"
   # - text: "Dưới đây là danh sách các khách sạn mà chúng tôi đã tìm được ạ \n
@@ -140,6 +156,9 @@ responses:
   #         - Khách sạn 3\n
   #         - Khách sạn 4\n
   #         Quý khách có thể click vào từng khách sạn đê xem chi tiết phòng ạ. Bot xin cảm ơn ạ."
+
+  # utter_distance_center:
+  # - text: "Trong phạm vi {distance} km chúng tôi đã tìm được cho {user_sex} {username} những khách sạn sau:"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
